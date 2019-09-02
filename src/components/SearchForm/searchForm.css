@@ -1,0 +1,24 @@
+.SearchInput{
+    width: 220px ;
+    height: 40px;
+    background-color: rgb(255, 240, 217);
+    border: none;
+    padding: 0 12px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px 0px 0px 5px;
+}
+.Submit{
+    background-color: rgb(255, 240, 217);
+    border: none;
+    outline: none;
+    width: 60px ;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 0px 5px 5px 0px;
+}
+.Submit:hover{
+    background-color: rgb(255, 236, 206);
+    cursor: pointer;
+}
+
