@@ -10,28 +10,42 @@ export class App extends Component {
   
   state={
     recipes:[],
+    display:true
   }
 
   getData =async (e) =>{
     const inputData = e.target.elements.food.value;
     e.preventDefault();
-    // const api_call = await fetch(
-    //   `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=4`);
-    // const data = await api_call.json();
-    this.setState({recipes:data.recipes})
+    const api_call = await fetch(
+      `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=21`);
+    const data = await api_call.json();
+    this.setState({recipes:data.recipes,display:true})
     console.log(data)
   }
 
   render() {
+    let listing = <p>Loading...</p>
+    if(this.state.display){
+      listing = (
+        this.state.recipes.map(recipe => {
+          return (
+            <Listing
+              img_url={recipe.image_url}
+              title={recipe.title}
+              publisher={recipe.publisher}
+            />
+          )
+        })
+      )
+    }
     return (
       <div className="App">
         <BannerText getData={this.getData}/>
-        
-        {/* {this.state.recipes.map(recipe=>{
-          return(
-            <Listing img_url={recipe.image_url}>{recipe.title}</Listing>
-          )
-        })} */}
+
+        <LayoutLists>
+        {listing}
+        </LayoutLists>
+
       </div>
     )
   }

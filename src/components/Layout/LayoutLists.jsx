@@ -1,7 +1,8 @@
 import React from 'react'
+import './LayoutLists.css'
 
 const LayoutLists = (props)=>(
-   <div className="Wrapper">
+   <div className="Container">
         {props.children}
    </div>
 )
