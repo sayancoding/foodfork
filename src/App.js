@@ -21,11 +21,11 @@ export class App extends Component {
     this.setState({display:true})
     const inputData = e.target.elements.food.value;
     e.preventDefault();
-    // const api_call = await fetch(
-    //   `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=21`);
-    // const data = await api_call.json();
-    // this.setState({recipes:data.recipes})
-    // console.log(data)
+    const api_call = await fetch(
+      `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=21`);
+    const data = await api_call.json();
+    this.setState({recipes:data.recipes})
+    console.log(data)
   }
   componentDidMount(){
     console.log(this.state.recipes.length)
