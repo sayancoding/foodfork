@@ -1,6 +1,7 @@
 .Container{
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
     justify-content: space-evenly;
 }
