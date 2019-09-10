@@ -4,6 +4,7 @@ import './App.css';
 import Listing from './components/Listing/Listing'
 import LayoutLists from './components/Layout/LayoutLists'
 import Banner from './components/Banner/banner'
+import Spinner from './components/UI/Spinner/Spinner'
 
 
 const API_KEY = '25bec5831c7c295514d09b0a2e2ed89d';
@@ -20,11 +21,11 @@ export class App extends Component {
     this.setState({display:true})
     const inputData = e.target.elements.food.value;
     e.preventDefault();
-    const api_call = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=21`);
-    const data = await api_call.json();
-    this.setState({recipes:data.recipes})
-    console.log(data)
+    // const api_call = await fetch(
+    //   `https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${inputData}&count=21`);
+    // const data = await api_call.json();
+    // this.setState({recipes:data.recipes})
+    // console.log(data)
   }
   componentDidMount(){
     console.log(this.state.recipes.length)
@@ -35,7 +36,7 @@ export class App extends Component {
     if(this.state.display)
     {
       if(this.state.recipes.length === 0 )
-       {listing = <h3>Loading...</h3>}
+       {listing = <Spinner/>}
        else{
         listing = (
           this.state.recipes.map(recipe => {
