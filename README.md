@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## clone this project 'nd run `npm install` on that dir
+### clone this project 'nd run `npm install` on that dir
 
 In the project directory, you can run:
 
