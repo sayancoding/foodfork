@@ -1,0 +1,46 @@
+.detail_container{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: #F3F5F9;
+  justify-content: center;
+}
+.header{
+  padding: 10px;
+  display: flex;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+}
+.header_text{
+  margin-top: 1.2rem;
+  margin-left: 4rem;
+}
+.head_img{
+  width: 20%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.dishTypes{
+  display: flex;
+  justify-content: center;
+}
+.title{
+  font-size: 1.2rem;
+  color: rgb(209, 93, 15);
+}
+.dishTypes p{
+  margin: 4px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  padding: 4px;
+  border-radius: 4px;
+}
+.summary{
+  color: rgb(146, 146, 146);
+}
+.ingredient{
+  margin-left: 20rem;
+  text-align: left;
+}
