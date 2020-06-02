@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./details.css";
 
 const API_KEY = "d9c2e05db28c4f25baa480f2ce078f4e";
+// 6ddcd3080b124092a8401340ddf8cb20
+const api_key = "6ddcd3080b124092a8401340ddf8cb20";
 export default class details extends Component {
   state = {
     title: "",
@@ -16,7 +18,7 @@ export default class details extends Component {
   getData = async () => {
     this.setState({ display: true });
     const api_call = await fetch(
-      `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=${API_KEY}&includeNutrition=false`
+      `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=${api_key}&includeNutrition=false`
     );
     const data = await api_call.json();
     this.setState({

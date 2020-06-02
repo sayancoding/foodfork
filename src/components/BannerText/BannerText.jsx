@@ -4,9 +4,9 @@ import SearchForm from '../SearchForm/searchForm'
 
 const BannerText = (props)=>(
     <div className="BannerText">
-        <div className="Head">
+        {/* <div className="Head">
             <a href="https://github.com/sayancoding">Build By @backward_space</a>
-        </div>
+        </div> */}
         <h1 className="TextHead">FOOD PARK</h1>
         <p>Get food Recipes</p>
         <SearchForm getData={props.getData} />

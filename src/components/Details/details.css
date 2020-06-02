@@ -13,7 +13,7 @@
   text-align: center;
 }
 .header_text{
-  margin-top: 1.2rem;
+  margin-top: 1.4rem;
   margin-left: 4rem;
 }
 .head_img{
@@ -27,7 +27,7 @@
   justify-content: center;
 }
 .title{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: rgb(209, 93, 15);
 }
 .dishTypes p{
@@ -41,6 +41,14 @@
   color: rgb(146, 146, 146);
 }
 .ingredient{
-  margin-left: 20rem;
+  margin-left: 0rem;
+  padding: 12px;
+  border-radius: 8px;
   text-align: left;
+  display: inline-block;
+
+  background-color: #fff;
+}
+.ingredient h2{
+  color: rgb(255, 94, 30);
 }
